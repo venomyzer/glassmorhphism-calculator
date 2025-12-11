@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+    filter: blur(6px);
+    transform:scale(1.2);
+}
+.video-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg, #000000 20%, rgba(0,0,0,0) 100%);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background: #e0e3eb;
+}
+.title {
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+    color: #ffffff;
+}
+.title span{
+    color: #6dff82;
+    font-style: initial;
+    font-weight: 700;
+}
+
+.container {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    padding: 10px 20px 20px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(207, 253, 206, 0.1) 0%, rgba(0, 156, 45, 0.2) 100%);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow:
+        0 0px 100px rgb(1, 11, 1),
+        0 2px 5px rgba(236, 255, 239, 0.2) inset;
+    overflow: hidden;
+}
+
+.display {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    text-align: right;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    pointer-events: none;
+    background-color: rgba(0,47,255,0);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+.buttons button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 16px;
+    box-shadow:
+            0 0px 100px rgb(1, 11, 1),
+            0 1px 2px rgba(255,255,255,0.2) inset;
+}
+.buttons button:active {
+    transform: scale(0.95);
+}
+.operator {
+    color: #6dff82;
+}
+.non-operator {
+    color: white;
+}
+
